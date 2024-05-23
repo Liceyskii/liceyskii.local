@@ -1,0 +1,255 @@
+body {
+    /* height: 2000px; */
+    width: auto;
+    background-color: #222222;
+    /* background-color: #ffffff; */
+}
+
+body .hr {
+    margin: 30px 20%;
+    height: 3px;
+    background-color: #000000;
+}
+
+.header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    display: flex; /*  Добавляем  display: flex */
+    align-items: center;  /*  Центрируем  по  вертикали */
+    justify-content: center;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 9px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 0px 9px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 0px 9px 5px -5px rgba(34, 60, 80, 0.6);
+    margin-top: 0;
+}
+
+.header img {
+    max-height: 100%;
+    width: 150px;
+    transition: width 0.3s ease, height 0.3s ease; /* Добавляем transition */
+}
+
+.header img:hover {
+    width: 155px; /*  Увеличиваем  ширину  на  10  пикселей */
+    height: auto; /*  Сохраняем  пропорции  изображения */
+}
+
+.header a {
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+    text-decoration: none;
+}
+
+.separator {
+    width: 1px;
+    height: 40%;
+    background-color: black;
+    margin: 30px 0px; /*  Добавляем  отступ  слева  и  справа */
+}
+
+.header-links {
+    text-align: center;
+    height: 100%;
+    padding-left: 100px;
+    display: flex; /*  Уже  есть  display: flex */
+    justify-content: space-between; /* Распределяем ссылки по ширине */
+}
+
+.header-links a {
+    height: 100%;
+    padding: 10px 15px;
+    position: relative;
+    display: flex; /*  Уже  есть  display: flex */
+    align-items: center;  /*  Центрируем  по  вертикали */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Добавляем transition */
+}
+
+.header-links a:hover {
+  background-color: black;
+  color: white;
+}
+
+.footer {
+    padding: 10px 0;
+    height: 100px;
+    text-align: center;
+    background-color: #000000;
+    font-family: "Open Sans", sans-serif;
+    color: #858585;
+}
+
+.footer p {
+    padding: 5px 0;
+    margin: 0;
+}
+
+.content {
+    margin-top: 0px;
+}
+
+.index-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;  
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(34, 60, 80, 0.6);
+    box-shadow: 0px 0px 5px 3px rgba(34, 60, 80, 0.6);
+}
+
+.index-image img {
+
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.text-block {
+    padding-top: 300px;
+    background-color: #fff;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+}
+
+.text-block h1 {
+    font-size: 50px;
+}
+
+.text-block p {
+    padding: 0px 300px 300px 300px;
+    margin-bottom: 0;
+}
+
+.voiting-list {
+    text-align: center;
+    padding: 0 0 300px 0;
+}
+
+.voiting-list label {
+    display: block;
+}
+
+.voiting-list p {
+    padding-bottom: 100px;
+}
+
+.voiting-list p a {
+    padding: 0;
+    font-size: 18px;
+}
+
+.voiting-list p a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.voiting-list a {
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+    transition: 0.3s ease;
+}
+
+.voiting-list a:hover{
+    color: #fff;
+    background-color: #000000;
+}
+
+.voiting-list .voted {
+    color: #fff;
+    background-color: #000000;
+}
+
+.voiting-list form a {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.links {
+    width: 100%;
+    text-align: center;
+    padding: 0 150px 100px 150px;
+}
+
+.links a {
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+}
+
+.link {
+    display: inline-block;
+    margin: 0 20px;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+
+.links .link:hover {
+    background-color: #000;
+}
+
+.links img {
+    width: 100px;
+    transition: 0.3s ease; /* Добавляем плавный переход для фильтра */
+}
+
+.links img:hover {
+    filter: invert(100%); /* Делаем изображение полностью белым */
+}
+
+.auth-form {
+    padding-top: 100px;
+    height: 880px;
+    background-color: #fff;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+}
+
+.auth-form form {
+    margin-bottom: 50px;
+}
+
+.auth-form label {
+    display: block;
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+
+.auth-form input {
+    text-align: center;
+    border: #000 1px solid;
+    border-radius: 10px;
+    width: 200px;
+    height: 60px;
+}
+
+.auth-form select {
+    text-align: center;
+    border: #000 1px solid;
+    border-radius: 10px;
+    width: 200px;
+    height: 60px;
+}
+
+.auth-form a {
+    color: #000;
+}
+
+.btn {
+    background-color: #fff;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #000000;
+}
