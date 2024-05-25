@@ -67,7 +67,11 @@ class AuthController extends Controller
         return redirect('login');
     }
 
-    public function recoverPassword() {
-        return 1;
+    public function recover() {
+        if (session('user')) {
+            return redirect()->route('index');
+        } else {
+            return view('auth.recover', ['message' => '']);
+        }
     }
 }

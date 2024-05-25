@@ -27,7 +27,8 @@ Route::post('/login', [AuthController::class, 'loginUser'])->name('login.user');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register', [AuthController::class, 'registerUser'])->name('register.user');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::get('/recover', [AuthController::class, 'recoverPassword'])->name('recover.user');
+Route::get('/recover', [AuthController::class, 'recover'])->name('recover');
+Route::post('/recover', [AuthController::class, 'recoverPassword'])->name('recover.user');
 
 Route::get('/voiting', [VoitingController::class, 'voitingList'])->name('voiting.list');
 Route::get('/voiting/{id}', [VoitingController::class, 'voitingView'])->name('voiting.view');
