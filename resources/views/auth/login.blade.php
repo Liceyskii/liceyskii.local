@@ -15,7 +15,7 @@
                 <label for=""></label>
                 <input type="submit" class="btn">
             </form>
-            <a href="{{ route('register') }}">Регистрация</a>
+            <a href="{{ route('register') }}">Регистрация</a> | <a href="{{ route('recover') }}">Восстановить пароль</a>
         </div>
     </x-slot>
 </x-main-layout>

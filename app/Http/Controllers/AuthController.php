@@ -74,4 +74,26 @@ class AuthController extends Controller
             return view('auth.recover', ['message' => '']);
         }
     }
+
+    public function recoverPassword(Request $request) {
+        $user = User::where('login', $request->login)->first();
+        if(!$user) return view('auth.recover', ['message' => 'Неверные данные']);
+        if (!Hash::check($request->secret_word, $user->secret_word)) {
+            return view('auth.recover', ['message' => 'Ошибка в секретном слове']);
+        }
+
+        $validatedData = $request->validate([
+            'password' => 'required|min:8',
+            'confirm-password' => 'required|same:password'
+        ], [
+            'password.required' => 'Поле "пароль" обязательное.',
+            'password.min' => 'Минимальная длинна пароля - 8 символов.',
+            'confirm-password' => 'Ошибка в подтверждении пароля.'
+        ]);
+
+        $user->password = Hash::make($validatedData['password']); 
+        $user->save();
+
+        return redirect('login');
+    }
 }

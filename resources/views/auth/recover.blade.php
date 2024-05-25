@@ -5,13 +5,16 @@
             <form name="recover" action="{{ route('recover.user') }}" method="post">
                 @csrf
                 @if($message != '')
-                    <label for="" style="height: 100px;"></label>
+                    <label for=""></label>
+                    <style>
+                        .auth-form {height: 1000px;}
+                    </style>
                     {{ $message }}
                 @endif
                 <label for="login">Логин</label>
                 <input type="text" name="login">
                 <label for="secret_word">Секретное слово</label>
-                <input type="password" name="secret_word">
+                <input type="text" name="secret_word">
                 <label for="password">Новый пароль</label>
                 <input type="password" name="password">
                 <label for="confirm-password">Подтвердите пароль</label>
