@@ -66,4 +66,8 @@ class AuthController extends Controller
         $user->save();
         return redirect('login');
     }
+
+    public function recoverPassword() {
+        return 1;
+    }
 }
